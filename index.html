@@ -448,6 +448,7 @@
 		function getPakeage() {
 			const dow_app = document.getElementById("dow_app")
 			var android_href = "https://www.888sq.live/apk_download/88shequ.apk";
+			var ios_href = "https://888sq4.com"
 			if (/macintosh|mac os x/i.test(navigator.userAgent)) {
 				document.querySelector('.dow_app').addEventListener('click', function () {
 					// document.querySelector('.addM').className = "help_show"
@@ -461,24 +462,13 @@
 			}
 			else if (/android/i.test(navigator.userAgent)) {
 				dow_app.href = android_href;
-				console.log("android")
 			}
 			else {
 				dow_app.href = ios_href;
-				dow_app_pc.href = android_href;
 			}
 			if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-				document.querySelector('.dow_app').addEventListener('click', function () {
-					document.querySelector('.addM').style.display = "block"
-				})
+				dow_app.href = ios_href;
 			}
-			console.log('12312')
-			document.querySelector('.close_btn').addEventListener('click', function () {
-				console.log('12312')
-
-				document.querySelector('.addM').style.display = "none"
-			})
-
 		}
 
 
